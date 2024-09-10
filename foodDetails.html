@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 10px;
+          text-align: left;
+          border: 1px solid #141313;
+          width: 100px;
+        }
+        th {
+          background-color: #f2f2f2;
+        }
+        .nested-table {
+            width:auto;
+            margin-left: 20px;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #7a7676;
+          }
+          .nested-table td {
+            border: none;
+            padding: 5px;
+          }
+          .nested-table th {
+            border: none;
+            padding: 5px;
+          }
+          .actions button {
+            display: inline-block;
+            margin: 5px;
+          }
+      </style>
+</head>
+<body>
+    <h1>Food Nutrition Information</h1>
+    <table id="foodTable">
+        <tr>
+          <th>Name</th>
+          <th>Food Group</th>
+          <th>Description</th>
+          <th>Nutritional Information</th>
+          <th>Serving Size</th>
+          <th>Allergens</th>
+          <th>Ingredients</th>
+          <th>Preparation Methods</th>
+          <th>Certifications</th>
+          <th>Country of Origin</th>
+          <th>Brand or Manufacturer</th>
+          <th>Dietary Restrictions</th>
+          <th>Health Benefits</th>
+          <th>Best Practices</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+    <script>
+        fetch('http://localhost:3200/getfoodInfo')
+        .then((res)=> res.json())
+        .then((data)=>populateTable(data))
+        .catch((e)=>console.log(e));
+
+        function generateNutritionalInfoHTML(data) {
+            let html = '<table class="nested-table">';
+            for (let key in data) {
+              if (typeof data[key] === 'object') {
+                html += `<tr><td>${key}</td><td>${generateNutritionalInfoHTML(data[key])}</td></tr>`;
+              } else {
+                html += `<tr><td>${key}</td><td>${data[key]}</td></tr>`;
+              }
+            }
+            html += '</table>';
+            return html;
+          }
+        
+        
+        // Function to populate the table with data
+        function populateTable(data) {
+        const table = document.getElementById("foodTable");
+    
+        data.forEach(item => {
+            const row = table.insertRow();
+            row.insertCell().textContent = item.name;
+            row.insertCell().textContent = item.foodGroup;
+            row.insertCell().textContent = item.description;
+            const nutritionalInfoCell = row.insertCell();
+            nutritionalInfoCell.classList.add('nutritional-info'); // Add class for nutritional information column
+            nutritionalInfoCell.innerHTML = generateNutritionalInfoHTML(item.nutritionalInformation);
+            row.insertCell().textContent = item.servingSize;
+            row.insertCell().textContent = item.allergens.join(', ');
+            row.insertCell().textContent = item.ingredients.join(', ');
+            row.insertCell().textContent = item.preparationMethods;
+            row.insertCell().textContent = item.certifications.join(', ');
+            row.insertCell().textContent = item.countryOfOrigin;
+            row.insertCell().textContent = item.brandOrManufacturer;
+            row.insertCell().textContent = item.dietaryRestrictions.join(', ');
+            row.insertCell().textContent = item.healthBenefits;
+            row.insertCell().textContent = item.bestPractices;
+            
+            // Add buttons for actions
+            const actionsCell = row.insertCell();
+            actionsCell.classList.add('actions');
+            actionsCell.innerHTML = `
+            <button id="editButton" onclick="editRow(this)">Edit</button>
+            <button onclick="deleteRow('${item._id}')">Delete</button>
+            <button id="saveButton" style="display:none" onclick="saveRow(this)">Save</button>
+            `;
+        });
+        }
+        const deleteRow= async (foodId)=>{
+          console.log(foodId);
+            try{
+              const response= await fetch(`http://localhost:3200/foodInfo/${foodId}`, {method:'DELETE'});
+              const data= await response.json();
+              //refresh
+              location.reload();
+            }
+            catch(e){
+              console.log(e);
+            }
+        }
+
+        const editRow = (button) => {
+            const row = button.parentNode.parentNode; // Get the parent row
+            const cells = row.getElementsByTagName('td'); // Get all cells in the row
+            for (let i = 0; i < cells.length - 1; i++) {
+                const cell = cells[i];
+                const text = cell.textContent; // Get the current text content
+                cell.innerHTML = `<input type="text" value="${text}">`; // Replace with input field
+            }
+            // Hide edit button and show save button
+            document.getElementById('editButton').style.display = 'none';
+            document.getElementById('saveButton').style.display = 'inline-block';
+        }
+        
+        const saveRow = async (button) => {
+            const row = button.parentNode.parentNode; // Get the parent row
+            const cells = row.getElementsByTagName('td'); // Get all cells in the row
+            const data = {};
+            for (let i = 0; i < cells.length - 1; i++) {
+                const cell = cells[i];
+                const input = cell.querySelector('input'); // Get the input field
+                const value = input.value; // Get the updated value
+                data[`item.${cell.textContent.trim().replace(/\s+/g, '')}`] = value; // Store updated value
+                cell.innerHTML = value; // Update cell content
+            }
+            // Show edit button and hide save button
+            document.getElementById('editButton').style.display = 'inline-block';
+            document.getElementById('saveButton').style.display = 'none';
+            try {
+                const response = await fetch(`http://localhost:3200/foodInfo/${data.item._id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data) // Send updated data to the backend
+                });
+                const updatedRecord = await response.json();
+                console.log('Updated record:', updatedRecord);
+            } catch (e) {
+                console.log(e);
+            }
+        }          
+            
+    </script>
+</body>
+</html>

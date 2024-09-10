@@ -1,0 +1,342 @@
+[
+    {
+      "name": "Apple" ,
+      "foodGroup": "Fruits",
+      "description": "A round fruit with red or green skin and a crisp texture.",
+      "nutritionalInformation": {
+        "calories": 95,
+        "macronutrients": {
+          "proteins": 0.5,
+          "fats": 0.3,
+          "carbohydrates": 25,
+          "saturatedFats": 0.1,
+          "unsaturatedFats": 0.2,
+          "transFats": 0,
+          "sugar": 19
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin C"],
+          "minerals": ["Potassium"]
+        },
+        "fiber": 4.4,
+        "sodium": 1,
+        "cholesterol": 0
+      },
+      "servingSize": "1 medium apple (182g)",
+      "allergens": [],
+      "ingredients": ["Apple"],
+      "preparationMethods": "Wash and eat raw or use in recipes.",
+      "certifications": ["Organic"],
+      "countryOfOrigin": "United States",
+      "brandOrManufacturer": "Local Farms",
+      "dietaryRestrictions": ["Gluten-free", "Vegan"],
+      "healthBenefits": "Rich in antioxidants and fiber, helps in maintaining heart health and digestion.",
+      "bestPractices": "Store apples in the refrigerator to maintain freshness."
+    },
+    {
+      "name": "Spinach",
+      "foodGroup": "Vegetables",
+      "description": "Leafy green vegetable with a mild, slightly bitter flavor.",
+      "nutritionalInformation": {
+        "calories": 7,
+        "macronutrients": {
+          "proteins": 0.9,
+          "fats": 0.1,
+          "carbohydrates": 1.1,
+          "saturatedFats": 0,
+          "unsaturatedFats": 0,
+          "transFats": 0,
+          "sugar": 0.1
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin A", "Vitamin K"],
+          "minerals": ["Iron", "Calcium"]
+        },
+        "fiber": 0.7,
+        "sodium": 24,
+        "cholesterol": 0
+      },
+      "servingSize": "1 cup (30g)",
+      "allergens": [],
+      "ingredients": ["Spinach"],
+      "preparationMethods": "Wash thoroughly and use in salads, smoothies, or cooked dishes.",
+      "certifications": [],
+      "countryOfOrigin": "United States",
+      "brandOrManufacturer": "Local Farms",
+      "dietaryRestrictions": ["Gluten-free", "Vegan"],
+      "healthBenefits": "High in iron and vitamins, supports bone health and immune system.",
+      "bestPractices": "Store spinach in the refrigerator and consume within a few days."
+    },
+    {
+      "name": "Salmon",
+      "foodGroup": "Seafood",
+      "description": "Fatty fish with pink flesh and a rich, savory flavor.",
+      "nutritionalInformation": {
+        "calories": 206,
+        "macronutrients": {
+          "proteins": 22,
+          "fats": 13,
+          "carbohydrates": 0,
+          "saturatedFats": 3,
+          "unsaturatedFats": 10,
+          "transFats": 0,
+          "sugar": 0
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin D", "Vitamin B12"],
+          "minerals": ["Selenium", "Omega-3 fatty acids"]
+        },
+        "fiber": 0,
+        "sodium": 55,
+        "cholesterol": 67
+      },
+      "servingSize": "3 oz (85g)",
+      "allergens": [],
+      "ingredients": ["Salmon"],
+      "preparationMethods": "Grill, bake, or pan-sear with seasonings.",
+      "certifications": ["Wild-caught"],
+      "countryOfOrigin": "Norway",
+      "brandOrManufacturer": "Ocean Fresh",
+      "dietaryRestrictions": ["Gluten-free", "Pescatarian"],
+      "healthBenefits": "Rich in omega-3 fatty acids, promotes heart health and brain function.",
+      "bestPractices": "Ensure salmon is cooked thoroughly before consumption."
+    },
+    {
+      "name": "Quinoa",
+      "foodGroup": "Grains",
+      "description": "Nutty-flavored grain-like seed often used as a gluten-free alternative to rice.",
+      "nutritionalInformation": {
+        "calories": 222,
+        "macronutrients": {
+          "proteins": 8,
+          "fats": 4,
+          "carbohydrates": 39,
+          "saturatedFats": 0.4,
+          "unsaturatedFats": 3.6,
+          "transFats": 0,
+          "sugar": 0.9
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin B6", "Folate"],
+          "minerals": ["Iron", "Magnesium"]
+        },
+        "fiber": 5,
+        "sodium": 13,
+        "cholesterol": 0
+      },
+      "servingSize": "1 cup cooked (185g)",
+      "allergens": [],
+      "ingredients": ["Quinoa"],
+      "preparationMethods": "Rinse quinoa and cook in water or broth until tender.",
+      "certifications": ["Organic", "Non-GMO"],
+      "countryOfOrigin": "Bolivia",
+      "brandOrManufacturer": "Natural Harvest",
+      "dietaryRestrictions": ["Gluten-free", "Vegetarian"],
+      "healthBenefits": "High in protein and fiber, contains essential amino acids.",
+      "bestPractices": "Store quinoa in a cool, dry place in an airtight container."
+    },
+    {
+      "name": "Almonds",
+      "foodGroup": "Nuts and Seeds",
+      "description": "Edible seeds with a hard outer shell, typically eaten raw or roasted.",
+      "nutritionalInformation": {
+        "calories": 160,
+        "macronutrients": {
+          "proteins": 6,
+          "fats": 14,
+          "carbohydrates": 6,
+          "saturatedFats": 1,
+          "unsaturatedFats": 13,
+          "transFats": 0,
+          "sugar": 1
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin E"],
+          "minerals": ["Calcium", "Magnesium"]
+        },
+        "fiber": 3.5,
+        "sodium": 0,
+        "cholesterol": 0
+      },
+      "servingSize": "1 oz (28g)",
+      "allergens": ["Tree nuts"],
+      "ingredients": ["Almonds"],
+      "preparationMethods": "Eat raw, roasted, or use in recipes.",
+      "certifications": ["Non-GMO"],
+      "countryOfOrigin": "United States",
+      "brandOrManufacturer": "Nuts 'R' Us",
+      "dietaryRestrictions": ["Gluten-free", "Vegetarian", "Vegan"],
+      "healthBenefits": "Rich in healthy fats, protein, and vitamin E, supports heart health.",
+      "bestPractices": "Store almonds in a cool, dry place in an airtight container."
+    },
+    {
+      "name": "Greek Yogurt",
+      "foodGroup": "Dairy",
+      "description": "Thick, creamy yogurt made by straining whey from regular yogurt.",
+      "nutritionalInformation": {
+        "calories": 100,
+        "macronutrients": {
+          "proteins": 17,
+          "fats": 0,
+          "carbohydrates": 7,
+          "saturatedFats": 0,
+          "unsaturatedFats": 0,
+          "transFats": 0,
+          "sugar": 7
+        },
+        "micronutrients": {
+          "vitamins": ["Calcium", "Vitamin D"],
+          "minerals": []
+        },
+        "fiber": 0,
+        "sodium": 40,
+        "cholesterol": 10
+      },
+      "servingSize": "1 container (150g)",
+      "allergens": ["Dairy"],
+      "ingredients": ["Milk", "Active cultures"],
+      "preparationMethods": "Enjoy plain or with toppings like fruit and honey.",
+      "certifications": ["Organic"],
+      "countryOfOrigin": "Greece",
+      "brandOrManufacturer": "Authentic Greek",
+      "dietaryRestrictions": ["Gluten-free"],
+      "healthBenefits": "High in protein and calcium, promotes gut health.",
+      "bestPractices": "Store Greek yogurt in the refrigerator and consume before expiration date."
+    },
+    {
+      "name": "Brown Rice",
+      "foodGroup": "Grains",
+      "description": "Whole grain rice with a nutty flavor and chewy texture.",
+      "nutritionalInformation": {
+        "calories": 216,
+        "macronutrients": {
+          "proteins": 5,
+          "fats": 1.8,
+          "carbohydrates": 45,
+          "saturatedFats": 0.4,
+          "unsaturatedFats": 1.4,
+          "transFats": 0,
+          "sugar": 0.7
+        },
+        "micronutrients": {
+          "vitamins": [],
+          "minerals": ["Magnesium", "Phosphorus"]
+        },
+        "fiber": 3.5,
+        "sodium": 1,
+        "cholesterol": 0
+      },
+      "servingSize": "1 cup cooked (195g)",
+      "allergens": [],
+      "ingredients": ["Brown rice"],
+      "preparationMethods": "Rinse rice and cook in water or broth until tender.",
+      "certifications": [],
+      "countryOfOrigin": "United States",
+      "brandOrManufacturer": "Farm Fresh",
+      "dietaryRestrictions": ["Gluten-free", "Vegetarian", "Vegan"],
+      "healthBenefits": "High in fiber and minerals, supports digestion and heart health.",
+      "bestPractices": "Store brown rice in a cool, dry place in an airtight container."
+    },
+    {
+      "name": "Broccoli",
+      "foodGroup": "Vegetables",
+      "description": "Green vegetable with a crisp texture and mild, slightly bitter taste.",
+      "nutritionalInformation": {
+        "calories": 31,
+        "macronutrients": {
+          "proteins": 2.6,
+          "fats": 0.4,
+          "carbohydrates": 6,
+          "saturatedFats": 0,
+          "unsaturatedFats": 0,
+          "transFats": 0,
+          "sugar": 1.5
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin C", "Vitamin K"],
+          "minerals": ["Calcium", "Iron"]
+        },
+        "fiber": 2.4,
+        "sodium": 33,
+        "cholesterol": 0
+      },
+      "servingSize": "1 cup chopped (91g)",
+      "allergens": [],
+      "ingredients": ["Broccoli"],
+      "preparationMethods": "Steam, roast, or stir-fry with seasonings.",
+      "certifications": [],
+      "countryOfOrigin": "United States",
+      "brandOrManufacturer": "Local Farms",
+      "dietaryRestrictions": ["Gluten-free", "Vegetarian", "Vegan"],
+      "healthBenefits": "High in vitamin C and fiber, supports immune system and digestion.",
+      "bestPractices": "Store broccoli in the refrigerator and consume within a few days."
+    },
+    {
+      "name": "Avocado",
+      "foodGroup": "Fruits",
+      "description": "Creamy green fruit with a smooth texture and nutty flavor.",
+      "nutritionalInformation": {
+        "calories": 234,
+        "macronutrients": {
+          "proteins": 3,
+          "fats": 21,
+          "carbohydrates": 12,
+          "saturatedFats": 3,
+          "unsaturatedFats": 15,
+          "transFats": 0,
+          "sugar": 0.2
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin K", "Vitamin E"],
+          "minerals": ["Potassium", "Magnesium"]
+        },
+        "fiber": 10,
+        "sodium": 10,
+        "cholesterol": 0
+      },
+      "servingSize": "1 avocado (200g)",
+      "allergens": [],
+      "ingredients": ["Avocado"],
+      "preparationMethods": "Slice and eat raw, mash for guacamole, or use in salads and sandwiches.",
+      "certifications": [],
+      "countryOfOrigin": "Mexico",
+      "brandOrManufacturer": "Local Farms",
+      "dietaryRestrictions": ["Gluten-free", "Vegetarian", "Vegan"],
+      "healthBenefits": "Rich in healthy fats and fiber, supports heart health and satiety.",
+      "bestPractices": "Store unripe avocados at room temperature until ripe, then refrigerate."
+    },
+    {
+      "name": "Chicken Breast",
+      "foodGroup": "Meat and Poultry",
+      "description": "Lean meat from the breast of a chicken, versatile and easy to cook.",
+      "nutritionalInformation": {
+        "calories": 165,
+        "macronutrients": {
+          "proteins": 31,
+          "fats": 3.6,
+          "carbohydrates": 0,
+          "saturatedFats": 1,
+          "unsaturatedFats": 2,
+          "transFats": 0,
+          "sugar": 0
+        },
+        "micronutrients": {
+          "vitamins": ["Vitamin B6", "Vitamin B12"],
+          "minerals": ["Iron", "Zinc"]
+        },
+        "fiber": 0,
+        "sodium": 74,
+        "cholesterol": 85
+      },
+      "servingSize": "3 oz (85g)",
+      "allergens": [],
+      "ingredients": ["Chicken breast"],
+      "preparationMethods": "Grill, bake, or sauté with seasonings.",
+      "certifications": [],
+      "countryOfOrigin": "United States",
+      "brandOrManufacturer": "Local Farms",
+      "dietaryRestrictions": ["Gluten-free"],
+      "healthBenefits": "High in protein, supports muscle growth and repair.",
+      "bestPractices": "Ensure chicken breast is cooked thoroughly to prevent foodborne illness."
+    }
+  ]  
